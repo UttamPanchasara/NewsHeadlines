@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UttamTask</string>
+
+    <string name="internet_error">Internet not available!</string>
+    <string name="text_no_headlines">No headlines to display</string>
+    <string name="top_headlines">Top Headlines</string>
+</resources>
