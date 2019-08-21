@@ -7,13 +7,13 @@ import com.uttampanchasara.baseprojectkotlin.ui.base.BaseActivity
 import com.uttampanchasara.baseprojectkotlin.ui.dashboard.DashboardActivity
 import javax.inject.Inject
 
-class SplashActivity : BaseActivity(), SplashView {
+class SplashActivity : BaseActivity(), SplashPresenter.View {
     override fun getLayout(): Int {
         return R.layout.activity_splash
     }
 
     @Inject
-    lateinit var mPresenter: SplashPresenter
+    lateinit var mPresenter: SplashModel
 
     override fun injectComponents(mActivityComponent: ActivityComponent) {
         mActivityComponent.inject(this)

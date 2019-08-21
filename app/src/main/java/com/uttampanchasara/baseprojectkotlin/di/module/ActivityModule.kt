@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import com.uttampanchasara.baseprojectkotlin.data.DataManager
 import com.uttampanchasara.baseprojectkotlin.di.ActivityContext
 import com.uttampanchasara.baseprojectkotlin.di.PerActivity
-import com.uttampanchasara.baseprojectkotlin.ui.dashboard.DashboardPresenter
-import com.uttampanchasara.baseprojectkotlin.ui.splash.SplashPresenter
+import com.uttampanchasara.baseprojectkotlin.ui.dashboard.DashboardModel
+import com.uttampanchasara.baseprojectkotlin.ui.splash.SplashModel
 import com.uttampanchasara.baseprojectkotlin.utils.rx.AppSchedulerProvider
 import com.uttampanchasara.baseprojectkotlin.utils.rx.SchedulerProvider
 import dagger.Module
@@ -39,12 +39,12 @@ class ActivityModule constructor(private val mActivity: AppCompatActivity) {
 
     @Provides
     @PerActivity
-    internal fun provideDashboardViewModel(dataManager: DataManager, schedulerProvider: SchedulerProvider, compositeDisposable: CompositeDisposable):
-            DashboardPresenter = DashboardPresenter(dataManager, schedulerProvider, compositeDisposable)
+    internal fun provideDashboardModel(dataManager: DataManager, schedulerProvider: SchedulerProvider, compositeDisposable: CompositeDisposable):
+            DashboardModel = DashboardModel(dataManager, schedulerProvider, compositeDisposable)
 
     @Provides
     @PerActivity
-    internal fun provideSplashViewModel(dataManager: DataManager, schedulerProvider: SchedulerProvider, compositeDisposable: CompositeDisposable):
-            SplashPresenter = SplashPresenter(dataManager, schedulerProvider, compositeDisposable)
+    internal fun provideSplashModel(dataManager: DataManager, schedulerProvider: SchedulerProvider, compositeDisposable: CompositeDisposable):
+            SplashModel = SplashModel(dataManager, schedulerProvider, compositeDisposable)
 
 }

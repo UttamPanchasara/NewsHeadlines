@@ -8,13 +8,13 @@ import com.uttampanchasara.baseprojectkotlin.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import javax.inject.Inject
 
-class DashboardActivity : BaseActivity(), DashboardView, HeadlinesAdapter.HeadlinesClickListener {
+class DashboardActivity : BaseActivity(), DashboardPresenter.View, HeadlinesAdapter.HeadlinesClickListener {
     override fun getLayout(): Int {
         return R.layout.activity_dashboard
     }
 
     @Inject
-    lateinit var mPresenter: DashboardPresenter
+    lateinit var mPresenter: DashboardModel
 
     private lateinit var mAdapter: HeadlinesAdapter
 
