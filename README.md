@@ -37,7 +37,7 @@ This is Simple Application to show News Feeds with best UI using Android's Mater
 
 # Donate
 > If you found this library helpful, consider buying me a cup of :coffee:
-- Google Pay **(panchasarauttam@okaxis)**
+- Paypal **https://paypal.me/UttamPanchasara**
 
 ## License
 
